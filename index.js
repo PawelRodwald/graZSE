@@ -3,21 +3,7 @@ $(document).ready(function () {
     let gameSequence = [];
     let userSequence = [];
     let level = 0;
-    let started = false;
-
-    $(".zse-kwadrat").click(function () {
-        if (!started) {
-            startGame($(this).attr("id"));
-        } else {
-            const userChosenColor = $(this).attr("id");
-            userSequence.push(userChosenColor);
-
-            playSound(userChosenColor);
-            animatePress(userChosenColor);
-
-            checkAnswer(userSequence.length - 1);
-        }
-    });
+    let started = false;});
 
     function startGame(firstColor) {
         level = 0;
